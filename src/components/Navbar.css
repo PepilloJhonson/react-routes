@@ -1,0 +1,47 @@
+/* Estilo general del navbar */
+.navbar {
+  background-color: #282c34;
+  padding: 1rem;
+}
+
+.navbar-list {
+  display: flex;
+  list-style: none;
+  justify-content: center;
+  gap: 2rem;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar-list li {
+  position: relative;
+}
+
+.navbar-list a {
+  text-decoration: none;
+  color: white;
+  font-size: 1.2rem;
+  transition: color 0.3s ease;
+}
+
+/* Hover para cambiar color */
+.navbar-list a:hover {
+  color: #61dafb;
+}
+
+/* Estilo del enlace activo */
+.navbar-list a.active {
+  font-weight: bold;
+  color: #61dafb;
+}
+
+.navbar-list a.active::after {
+  content: '';
+  position: absolute;
+  top: -5px; /* Ajusta según el espacio que quieras encima del enlace */
+  left: 0;
+  right: 0;
+  height: 3px; /* Grosor de la barra */
+  background-color: #61dafb;
+  border-radius: 2px;
+}
